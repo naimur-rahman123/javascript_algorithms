@@ -57,7 +57,7 @@ class BinarySearchTree {
     return undefined;
   }
 
-  // Breadth First Search --> Uses a queue to track all "SIBLINGS" from left to right --> O(log n)
+  // Breadth First Search --> Uses a queue to track all "SIBLINGS" from left to right --> O(n)
   // If its a wide tree --> BFS will take a lot more spaces because of the queue
   BFS() {
     const nodes = [];
@@ -77,7 +77,7 @@ class BinarySearchTree {
     return nodes;
   }
 
-  // Depeth first Search --> Uses recursion to gr from to to bottom --> O(log n)
+  // Depeth first Search --> Uses recursion to gr from to to bottom --> O(n)
   // If its a wide tree --> DFS will take a lot more spaces because of the call stack
 
   // Visit the Node --> First push the Node first -> Then traverse left side -> Then traverse right side
