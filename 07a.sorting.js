@@ -4,8 +4,8 @@
 //   Best	O(n)
 //   Worst	O(n^2)
 //   Average	O(n^2)
-//   Space Complexity	O(1)
-//   Stability	Yes
+// Space Complexity	O(1)
+// Stability	Yes
 
 // Algorithm:
 
@@ -27,7 +27,7 @@
 //    - The same process goes on for the remaining iterations.
 //    - After each iteration, the largest element among the unsorted elements is placed at the end.
 
-// Implementation: smallest to largest
+// Implementation: 
 function swap(arr, idx1, idx2) {
   [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
 }
@@ -60,8 +60,8 @@ console.log(bubbleSort([9, 1, 2, 3, 4, 5, 6, 7, 8])); // [1, 2, 3, 4, 5, 6, 7, 8
 //   Best	O(n^2)
 //   Worst	O(n^2)
 //   Average	O(n^2)
-//   Space Complexity	O(1)
-//   Stability	No
+// Space Complexity	O(1)
+// Stability	No
 
 // Algorithm:
 
@@ -105,8 +105,8 @@ console.log(selectionSort([9, 1, 2, 3, 4, 5, 6, 7, 8])); // [1, 2, 3, 4, 5, 6, 7
 //   Best	O(n)
 //   Worst	O(n^2)
 //   Average	O(n^2)
-//   Space Complexity	O(1)
-//   Stability	Yes
+// Space Complexity	O(1)
+// Stability	Yes
 
 // Algorithm:
 
