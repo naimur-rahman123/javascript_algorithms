@@ -80,3 +80,58 @@ const names2 = names.concat(['Peter', 'Kevin']); // O(n) --> Technically it's O(
 //  Mozilla uses merge sort for the sort() method
 // In Chrome's v8 source code, as of today, it uses QuickSort and InsertionSort, for smaller arrays for the sort() method
 const sortedNames = names.sort(); // O(n * log(n))
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// Implementing an "Array"
+
+class MyArray {
+  constructor() {
+    this.length = 0;
+    this.data = {};
+  }
+
+  get(index) {
+    return this.data[index];
+  }
+
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
+  }
+
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    if (this.length > 0) this.length--;
+    return lastItem;
+  }
+
+  // O(n)
+  delete(index) {
+    const item = this.data[index];
+    this.shiftItems(index);
+    return item;
+  }
+
+  shiftItems(index) {
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+    delete this.data[this.length - 1];
+    this.length--;
+  }
+}
+
+const myArr = new MyArray();
+myArr.push('John');
+myArr.push('Murphy');
+myArr.push('Benjin');
+myArr.push('Celia');
+myArr.push('Lulu');
+myArr.push('Kaity');
+console.log(myArr.pop());
+console.log(myArr.pop());
+console.log(myArr.pop());
+console.log(myArr.delete(1));
+console.log(myArr);
